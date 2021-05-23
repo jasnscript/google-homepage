@@ -1,188 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-        }
-
-        .navbar {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            padding: 6px; 
-            margin: 0;
-            font-size: 13px;
-            align-items: center;
-        }
-        a {
-            color: rgba(0,0,0,0.87);
-            text-decoration: none;
-        }
-        a:visited {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        #about {
-            margin: 0 5px 0 15px;
-            padding: 5px;
-            font-size: 14px;
-        }
-
-        #store {
-            margin: 0 5px 0 5px;
-            padding: 5px;
-            font-size: 14px;
-        }
-
-        #gmail {
-            margin-left: auto;
-            padding: 0 0 0 0;
-        }
-
-        #images {
-            padding: 0 15px 0 15px;
-        }
-
-        #apps {
-            padding: 8px;
-        }
-        #apps-icon {
-            padding: 4px;
-        }
-        #apps:hover {
-            border-radius: 50%;
-            background: rgba(60,64,67,0.08);
-        }
-
-        #signin-button {
-            font-family: Arial, sans-serif;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: .25px;
-            line-height: 16px;
-            margin: 8px;
-            padding: 9px 23px 9px 23px;
-            color: #fff;
-            background: rgb(26, 115, 232);
-            border: 0;
-            border-radius: 4px;
-        }
-        #signin-button:hover {
-            background: #2b7de9;
-            box-shadow: 0px 1px 2px 0 rgba(66,133,244,0.3), 0 1px 3px 1px rgba(66,133,244,0.15);
-        }
-
-        li {
-            display: inline;
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 92px;
-            max-height: 290px;
-            height: calc(100% - 560px);
-        }
-        
-        #google-logo {
-            display: flex;
-            justify-content: center;
-        }
-        .search-container {
-            padding: 20px;
-        }
-        .search-bar {
-            display: flex;
-            flex-direction: row;
-            margin: auto;
-            max-width: 584px;
-            height: 44px;
-            border: 1px solid rgb(223, 225, 229);
-            border-radius: 24px;
-        }
-
-        .search-input {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-buttons {
-            display: flex;
-            justify-content: center;    
-            padding: 18px;      
-        }
-
-        #google-search, #lucky {
-            margin: 11px 4px;
-            padding: 10px 16px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            border: 0;
-            border-radius: 4px;
-            background-color: #f8f9fa;
-        }
-
-        #google-search:hover, #lucky:hover {
-            border: 1px solid #dadce0;
-            margin: 10px 3px;
-            box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.1);
-        }
-
-        .material-icons {
-            color: rgb(59, 59, 59);
-        }
-
-        .search-icon {
-            display: flex;
-            align-items: center;
-        }
-        #search-icon {
-            display: flex;
-            color:rgba(59, 59, 59, 0.39)
-        }
-
-
-    </style>
 </head>
 
 <body>
-    <nav>
-        <ul class="navbar">
-            <li id="about"><a href="#">About</a></li>
-            <li id="store"><a href="#">Store</a></li>
-            <li id="gmail"><a href="#">Gmail</a></li>
-            <li id="images"><a href="#">Images</a></li>
-            <li id="apps"><a href="#"><span id="apps-icon" class="material-icons">apps
-            </span></a></li>
-            <li id="signin"><button id="signin-button" type="submit">Sign In</button></li>                        
-        </ul>
-    </nav>  
+    <div class="main">
+        <nav>
+            <ul class="navbar">
+                <li id="about"><a id="a-about" href="#">About</a></li>
+                <li id="store"><a id="a-store" href="#">Store</a></li>
+                <li id="gmail"><a id="a-gmail" href="#">Gmail</a></li>
+                <li id="images"><a id="a-images" href="#">Images</a></li>
+                <li id="apps"><a id="a-apps" href="#"><span id="apps-icon" class="material-icons">apps
+                </span></a></li>
+                <li id="signin"><button id="signin-button" type="submit">Sign In</button></li>                        
+            </ul>
+        </nav>  
 
-    <div class="logo">
-        <a id="google-logo" href="#"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></a>
-    </div>
-    <div class="search-container">
-        <div class="search-bar">
-            <div class="search-icon">
-                <span id="search-icon" class="material-icons">search</span>
+        <div class="logo">
+            <a id="google-logo" href="#"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></a>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <div class="search-icon">
+                    <span id="search-icon" class="material-icons">search</span>
+                </div>
+                <form class="search-form">
+                    <input id="search-input" type="text">
+                </form>
             </div>
-            <div class="search-input">
-                <input type="text">
+            <div class="search-buttons">
+                <button id="google-search" type="submit">Google Search</button>
+                <button id="lucky" type="submit">I'm Feeling Lucky</button>
             </div>
         </div>
-        <div class="search-buttons">
-            <button id="google-search" type="submit">Google Search</button>
-            <button id="lucky" type="submit">I'm Feeling Lucky</button>
-        </div>
+
+        <footer class="footer">
+            <ul class="bottom-list-left">
+                <li id="advertising"><a id="a-advertising" href="#">Advertising</a></li>
+                <li id="business"><a id="a-business" href="#">Business</a></li>
+                <li id="howsearchworks"><a id="a-howsearchworks" href="#">How Search Works</a></li>
+            </ul>
+            <ul class="bottom-list-center">
+                <img id="leaf" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" class="Pb9hCb" alt="" data-atf="1">
+                <li id="carbonneutral"><a id="a-carbonneutral" href="#">Carbon neutral since 2007</a></li>
+            </ul>
+            <ul class="bottom-list-right">
+                <li id="privacy"><a id="a-privacy" href="#">Privacy</a></li>
+                <li id="terms"><a id="a-terms" href="#">Terms</a></li>
+                <li id="settings"><a id="a-settings" href="#">Settings</a></li>
+            </ul>
+        </footer>
     </div>
 </body>
